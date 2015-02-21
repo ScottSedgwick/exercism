@@ -141,6 +141,10 @@ build/
 *.swo
 *.dotcover
 .DS_Store
+packages.config
+fsharp/**/obj
+fsharp/**/bin
+fsharp/**/packages
 
 
 ### Languages I don't do yet ###
