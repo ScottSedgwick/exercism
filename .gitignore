@@ -147,6 +147,12 @@ fsharp/**/bin
 fsharp/**/packages
 
 
+### CSharp ###
+csharp/**/obj
+csharp/**/bin
+csharp/**/packages
+
+
 ### Languages I don't do yet ###
 coffeescript
 cpp
