@@ -105,6 +105,7 @@ target/
 /test/tmp/
 /test/version_tmp/
 /tmp/
+.rubocop.rb
 
 ## Specific to RubyMotion:
 .dat*

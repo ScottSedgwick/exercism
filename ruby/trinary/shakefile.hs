@@ -1,8 +1,8 @@
 import Development.Shake
 import Development.Shake.FilePath
 
-src_file = "etl.rb"
-tst_file = "etl_test.rb"
+src_file = "trinary.rb"
+tst_file = "trinary_test.rb"
 
 rubocop = ".rubocop.rb"
 
