@@ -6,10 +6,25 @@ srcFile = "Queens.hs"
 tstFile = "queen-attack_test.hs"
 
 exeFile | os == "darwin" = replaceExtension tstFile ""
-         | otherwise      = replaceExtension tstFile "exe"
+        | otherwise      = replaceExtension tstFile "exe"
 
 exeCmd  | os == "darwin" = "./" ++ exeFile
-         | otherwise      = exeFile
+        | otherwise      = exeFile
+
+tmpFile = srcFile ++ ".tmp"
+
+hindent :: FilePath -> Action(String)
+hindent f = do
+	s <- readFile' f
+	Stdout out <- command [Stdin s] "hindent" ["--style", "gibiansky"]
+	return out
+
+diffHIndent :: FilePath -> Action()
+diffHIndent f = do
+	tmp <- hindent f
+	writeFile' tmpFile tmp
+	Exit _ <- command [] "BCompare.exe" [tmpFile, f]
+	removeFilesAfter "." [tmpFile]
 
 main :: IO()
 main = shakeArgs shakeOptions $ do
@@ -26,8 +41,20 @@ main = shakeArgs shakeOptions $ do
 		need [srcFile]
 		cmd "hlint" srcFile
 
+	"diff" ~> do
+		diffHIndent srcFile
+
+	"checkIndent" ~> do
+		need ["lint"]
+		tmp <- hindent srcFile
+		src <- readFile' srcFile
+		if (src == tmp)
+			then putQuiet "No suggestions"
+			else diffHIndent srcFile
+
+
 	"test" ~> do
-		need [exeFile, "lint"]
+		need [exeFile, "lint", "checkIndent"]
 		cmd exeCmd
 
 	"submit" ~> do
