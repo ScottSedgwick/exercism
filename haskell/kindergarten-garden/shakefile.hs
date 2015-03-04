@@ -23,7 +23,7 @@ main = shakeArgs shakeOptions $ do
 
 	"test" ~> do
 		need [exeFile]
-		cmd exe_cmd
+		cmd exeCmd
 
 	"submit" ~> do
 		need [srcFile, "test"]

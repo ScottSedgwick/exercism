@@ -1,7 +1,7 @@
 module Garden (garden, defaultGarden, lookupPlants, Plant(..)) where
 
 import Data.List (sort, transpose)
-import Data.Maybe(fromJust, isJust)
+import Data.Maybe(fromMaybe)
 
 data Plant = Grass | Clover | Radishes | Violets deriving (Show, Eq)
 

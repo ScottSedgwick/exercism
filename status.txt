@@ -1,13 +1,13 @@
-csharp/prime-factors		Submitted 26 Feb
-haskell/queen-attack		Submitted 26 Feb
-ruby/etl					Submitted 26 Feb
+csharp/raindrops			Submitted 05 Mar
+haskell/binary-search-tree	Submitted 05 Mar
+ruby/trinary				Submitted 05 Mar
 python/luhn					Submitted 27 Feb
 fsharp/trinary				Submitted 27 Feb
-go/clock					Submitted 02 Mar
+go/gigasecond				Submitted 02 Mar
 
-csharp/raindrops			Ready
-haskell/binary-search-tree	Ready
-ruby/trinary				Ready
-fsharp/etl					Ready
-python/etl					Ready
-go/gigasecond				Ready
+csharp/allergies				Ready
+haskell/difference-of-squares	Ready
+ruby/beer-song					Ready
+fsharp/etl						Ready
+python/etl						Ready
+go/raindrops					Ready
