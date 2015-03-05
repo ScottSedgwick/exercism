@@ -5,9 +5,9 @@ python/luhn					Submitted 27 Feb
 fsharp/trinary				Submitted 27 Feb
 go/gigasecond				Submitted 02 Mar
 
-csharp/allergies				Ready
+csharp/allergies				Not Ready
 haskell/difference-of-squares	Ready
-ruby/beer-song					Ready
+ruby/beer-song					Not Ready
 fsharp/etl						Ready
 python/etl						Ready
 go/raindrops					Ready
