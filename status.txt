@@ -1,13 +1,13 @@
-csharp/raindrops			Submitted 05 Mar
-haskell/binary-search-tree	Submitted 05 Mar
-ruby/trinary				Submitted 05 Mar
-python/luhn					Submitted 27 Feb
-fsharp/trinary				Submitted 27 Feb
-go/gigasecond				Submitted 02 Mar
-
-csharp/allergies				Not Ready
-haskell/difference-of-squares	Ready
-ruby/beer-song					Not Ready
-fsharp/etl						Ready
-python/etl						Ready
-go/raindrops					Ready
+csharp/raindrops			          Submitted 05 Mar
+haskell/binary-search-tree      Submitted 05 Mar
+ruby/trinary				            Submitted 05 Mar
+python/luhn					            Submitted 27 Feb
+fsharp/trinary				          Submitted 27 Feb
+go/gigasecond				            Submitted 02 Mar
+                                
+csharp/allergies				        Not Ready
+haskell/difference-of-squares	  Ready
+ruby/beer-song				          Ready
+fsharp/etl						          Ready
+python/etl						          Ready
+go/raindrops					          Ready

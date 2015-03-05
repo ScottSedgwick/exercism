@@ -35,6 +35,7 @@ cabal.config
 *.hp
 *.exe
 .shake.database
+*.tmp
 
 
 ### Python ###

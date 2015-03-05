@@ -10,35 +10,34 @@ module BST (
 
 import           Data.List (foldl')
 
-data BstNode = BstNode { bstValue :: !Int
-                       , bstLeft :: Maybe BstNode
-                       , bstRight :: Maybe BstNode
-                       }
-  deriving Show
+data BstNode a = BstNode { bstValue :: !a
+                         , bstLeft :: Maybe (BstNode a)
+                         , bstRight :: Maybe (BstNode a)
+                         }
 
-singleton :: Int -> BstNode
+singleton :: a -> BstNode a
 singleton v = BstNode v Nothing Nothing
 
-insertL :: Int -> BstNode -> BstNode
+insertL :: Ord a => a -> BstNode a -> BstNode a
 insertL n (BstNode v Nothing r) = BstNode v (Just (singleton n)) r
 insertL n (BstNode v (Just l) r) = BstNode v (Just (insert n l)) r
 
-insertR :: Int -> BstNode -> BstNode
+insertR :: Ord a => a -> BstNode a -> BstNode a
 insertR n (BstNode v l Nothing) = BstNode v l (Just (singleton n))
 insertR n (BstNode v l (Just r)) = BstNode v l (Just (insert n r))
 
-insert :: Int -> BstNode -> BstNode
+insert :: Ord a => a -> BstNode a -> BstNode a
 insert value node
   | value > bstValue node = insertR value node
   | otherwise = insertL value node
 
-fromList :: [Int] -> BstNode
+fromList :: Ord a => [a] -> BstNode a
 fromList [] = error "Cannot build BST from empty list"
 fromList (x:xs) = foldl' (flip insert) (singleton x) xs
 
-toList' :: Maybe BstNode -> [Int]
+toList' :: Maybe (BstNode a) -> [a]
 toList' Nothing = []
 toList' (Just (BstNode v l r)) = toList' l ++ v : toList' r
 
-toList :: BstNode -> [Int]
+toList :: BstNode a -> [a]
 toList n = toList' (Just n)
