@@ -2,6 +2,7 @@ package raindrops
 
 import (
 	"fmt"
+	"sort"
 )
 
 var sounds = map[int]string{
@@ -11,10 +12,15 @@ var sounds = map[int]string{
 }
 
 func Convert(value int) string {
+	var keys []int
+	for k := range sounds {
+		keys = append(keys, k)
+	}
+	sort.Ints(keys)
 	result := ""
-	for k, v := range sounds {
+	for _, k := range keys {
 		if value%k == 0 {
-			result += v
+			result += sounds[k]
 		}
 	}
 	if result == "" {
