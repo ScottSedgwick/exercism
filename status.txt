@@ -1,13 +1,13 @@
+go/raindrops                    Submitted 09 Mar
+haskell/hexadecimal             Submitted 09 Mar
 python/etl					            Submitted 06 Mar
 fsharp/etl				              Submitted 06 Mar
-haskell/difference-of-squares   Submitted 06 Mar
 csharp/raindrops                Submitted 05 Mar
 ruby/trinary                    Submitted 05 Mar
-go/gigasecond                   Submitted 02 Mar
                                 
-csharp/allergies				        Not Ready
-haskell/hexadecimal	            Ready
+csharp/allergies				        Ready
+haskell/largest-series-product  Ready
 ruby/beer-song				          Ready
-fsharp/octal						        Not Ready
-python/prime-factors	          Not Ready
-go/raindrops					          Ready
+fsharp/octal						        Ready
+python/prime-factors	          Ready
+go/triangle 					          Ready
