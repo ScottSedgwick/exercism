@@ -1,13 +1,13 @@
 ruby/beer-song                  Submitted 09 Mar
 go/raindrops                    Submitted 09 Mar
-haskell/hexadecimal             Submitted 09 Mar
+haskell/largest-series-product  Submitted 09 Mar
 python/etl					            Submitted 06 Mar
 fsharp/etl				              Submitted 06 Mar
 csharp/raindrops                Submitted 05 Mar
                                 
 csharp/allergies				        Ready
-haskell/largest-series-product  Ready
-ruby/space-age				          Not Ready
+haskell/luhn                    Ready
+ruby/space-age				          Ready
 fsharp/octal						        Ready
 python/prime-factors	          Ready
 go/triangle 					          Ready
