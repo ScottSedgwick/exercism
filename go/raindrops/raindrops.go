@@ -2,25 +2,24 @@ package raindrops
 
 import (
 	"fmt"
-	"sort"
 )
 
-var sounds = map[int]string{
-	3: "Pling",
-	5: "Plang",
-	7: "Plong",
+type RainSound struct {
+	factor int
+	sound  string
+}
+
+var sounds = []RainSound{
+	RainSound{3, "Pling"},
+	RainSound{5, "Plang"},
+	RainSound{7, "Plong"},
 }
 
 func Convert(value int) string {
-	var keys []int
-	for k := range sounds {
-		keys = append(keys, k)
-	}
-	sort.Ints(keys)
 	result := ""
-	for _, k := range keys {
-		if value%k == 0 {
-			result += sounds[k]
+	for _, s := range sounds {
+		if value%s.factor == 0 {
+			result += s.sound
 		}
 	}
 	if result == "" {

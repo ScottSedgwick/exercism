@@ -14,14 +14,21 @@ const (
 	NaT
 )
 
+func isInvalid(v float64) bool {
+	return math.IsNaN(v) || math.IsInf(v, 1) || math.IsInf(v, -1)
+}
+
 func KindFromSides(a float64, b float64, c float64) Kind {
 	s := []float64{a, b, c}
+
 	for _, v := range s {
-		if math.IsNaN(v) || math.IsInf(v, 1) || math.IsInf(v, -1) {
+		if isInvalid(v) {
 			return NaT
 		}
 	}
+
 	sort.Float64s(s)
+
 	if s[0]+s[1] <= s[2] {
 		return NaT
 	} else if (s[0] == s[1]) && (s[1] == s[2]) {

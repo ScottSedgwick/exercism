@@ -33,10 +33,9 @@ isValid :: Integer -> Bool
 isValid = (0 ==) . checksum
 
 create :: Integer -> Integer
-create x = x10 + c
+create x = x * 10 + c
   where
-    x10 = x * 10
-    c10 = checksum x10
-    c = if c10 `mod` 10 == 0
+    c' = checksum (x * 10)
+    c = if c' `mod` 10 == 0
           then 0
-          else 10 - c10
+          else 10 - c'

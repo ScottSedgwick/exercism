@@ -1,18 +1,17 @@
 module Series (digits, slices, largestProduct) where
 
 import           Data.Char (digitToInt)
+import           Data.List (tails)
 
 digits :: String -> [Int]
 digits = map digitToInt
 
 slices :: Int -> String -> [[Int]]
-slices n cs
-  | n < 1 = []
-  | n > length cs = []
-  | otherwise = digits (take n cs) : slices n (tail cs)
+slices n = takeWhile ((==) n . length) . map (take n) . tails . digits
+
+maxDef :: Ord a => a -> [a] -> a
+maxDef d [] = d
+maxDef _ xs = maximum xs
 
 largestProduct :: Int -> String -> Int
-largestProduct = ((biggest . map product) .) . slices
-  where
-    biggest [] = 1
-    biggest xs = maximum xs
+largestProduct = ((maxDef 1 . map product) .) . slices
