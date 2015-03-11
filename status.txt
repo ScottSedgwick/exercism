@@ -10,4 +10,4 @@ haskell/clock                   Not Ready
 ruby/space-age				          Ready
 fsharp/octal						        Ready
 python/prime-factors	          Ready
-go/difference-of-squares 				Not Ready
+go/difference-of-squares 				Ready

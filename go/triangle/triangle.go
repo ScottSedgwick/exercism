@@ -15,7 +15,7 @@ const (
 )
 
 func isInvalid(v float64) bool {
-	return math.IsNaN(v) || math.IsInf(v, 1) || math.IsInf(v, -1)
+	return math.IsNaN(v) || math.IsInf(v, 0)
 }
 
 func KindFromSides(a float64, b float64, c float64) Kind {
