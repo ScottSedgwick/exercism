@@ -27,7 +27,7 @@ addends :: Integer -> [Integer]
 addends = reverse . double2nds . reverse . digits 10
 
 checksum :: Integer -> Integer
-checksum = flip mod 10 . sum . addends
+checksum = checkDigit . sum . addends
 
 isValid :: Integer -> Bool
 isValid = (0 ==) . checksum
