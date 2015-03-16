@@ -5,8 +5,9 @@ import           Text.Printf
 minsPerDay :: Integer
 minsPerDay = 1440
 
-data Time = Time Integer
+newtype Time = Time Integer
   deriving Eq
+
 instance Show Time where
   show t = printf "%02d:%02d" (hours t) (minutes t)
 instance Num Time where
