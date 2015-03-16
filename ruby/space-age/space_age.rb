@@ -1,13 +1,13 @@
-EARTH_SECS = 31_557_600
+EARTH_YEAR_SECS = 31_557_600
 YEAR_LENGTH = {
-  'earth'   => EARTH_SECS * 1.0,
-  'mercury' => EARTH_SECS * 0.2408467,
-  'venus'   => EARTH_SECS * 0.61519726,
-  'mars'    => EARTH_SECS * 1.8808158,
-  'jupiter' => EARTH_SECS * 11.862615,
-  'saturn'  => EARTH_SECS * 29.447498,
-  'uranus'  => EARTH_SECS * 84.016846,
-  'neptune' => EARTH_SECS * 164.79132
+  'earth'   => EARTH_YEAR_SECS * 1.0,
+  'mercury' => EARTH_YEAR_SECS * 0.2408467,
+  'venus'   => EARTH_YEAR_SECS * 0.61519726,
+  'mars'    => EARTH_YEAR_SECS * 1.8808158,
+  'jupiter' => EARTH_YEAR_SECS * 11.862615,
+  'saturn'  => EARTH_YEAR_SECS * 29.447498,
+  'uranus'  => EARTH_YEAR_SECS * 84.016846,
+  'neptune' => EARTH_YEAR_SECS * 164.79132
 }
 
 # Solution for Exercism.io Ruby Space Age problem.
@@ -19,13 +19,9 @@ class SpaceAge
   end
 
   def method_missing(method_sym, *arguments, &block)
-    if method_sym.to_s =~ /^on_(.*)$/
-      planet = Regexp.last_match[1].to_s
-      if YEAR_LENGTH.key? planet
-        age_on planet
-      else
-        super
-      end
+    md = /^on_(.*)$/.match(method_sym.to_s)
+    if md && YEAR_LENGTH.key?(md[1].to_s)
+      age_on md[1].to_s
     else
       super
     end
