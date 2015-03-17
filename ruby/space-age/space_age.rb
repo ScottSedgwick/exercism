@@ -27,7 +27,7 @@ class SpaceAge
     end
   end
 
-  :private
+  private
 
   def age_on(planet)
     (@seconds * 100.0 / YEAR_LENGTH[planet]).round / 100.0

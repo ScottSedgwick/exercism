@@ -1,13 +1,13 @@
 ruby/space-age                  Submitted 17 Mar
-python/etl					            Submitted 17 Mar
-fsharp/prime-factors				    Submitted 17 Mar
+python/prime-factors					  Submitted 17 Mar
+fsharp/octal				            Submitted 17 Mar
 csharp/allergies                Submitted 17 Mar
 haskell/matrix                  Submitted 13 Mar
 go/difference-of-squares        Submitted 13 Mar
                                 
 csharp/strain				            Not Ready
 haskell/house                   Not Ready
-ruby/binary-search-tree				  Not Ready
+ruby/binary-search-tree				  Ready
 fsharp/pig-latin						    Not Ready
 python/simple-cipher	          Not Ready
 go/secret-handshake				      Not Ready

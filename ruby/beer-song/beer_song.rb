@@ -15,7 +15,7 @@ class BeerSong
     verses(99, 0)
   end
 
-  :private
+  private
 
   def n1(n)
     n == 0 ? 'no more' : n.to_s
