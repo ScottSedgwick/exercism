@@ -8,19 +8,19 @@ const (
 	reverse
 )
 
-type handshakePart struct {
+type gesture struct {
 	flag    int
 	message string
 }
 
-var parts = []handshakePart{
-	handshakePart{wink, "wink"},
-	handshakePart{doubleBlink, "double blink"},
-	handshakePart{closeYourEyes, "close your eyes"},
-	handshakePart{jump, "jump"},
+var gestures = []gesture{
+	gesture{wink, "wink"},
+	gesture{doubleBlink, "double blink"},
+	gesture{closeYourEyes, "close your eyes"},
+	gesture{jump, "jump"},
 }
 
-func reverseArray(arr []string) []string {
+func reverseStrings(arr []string) []string {
 	l := len(arr)
 	result := make([]string, l)
 	for i := range arr {
@@ -30,14 +30,14 @@ func reverseArray(arr []string) []string {
 }
 
 func Handshake(code int) (result []string) {
-	if code > 0 && code <= (reverse*2) {
-		for _, h := range parts {
-			if code&h.flag != 0 {
-				result = append(result, h.message)
+	if code > 0 && code <= reverse*2 {
+		for _, g := range gestures {
+			if code&g.flag != 0 {
+				result = append(result, g.message)
 			}
 		}
 		if code&reverse != 0 {
-			result = reverseArray(result)
+			result = reverseStrings(result)
 		}
 	}
 	return result
