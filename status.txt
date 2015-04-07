@@ -5,7 +5,7 @@ fsharp/pig-latin						    Submitted 30-03-2015 - Liked
 python/simple-cipher	          Updated 31-03-2015
 go/secret-handshake				      Updated 31-03-2015
 
-csharp/atbash-cipher            Not Ready
+csharp/atbash-cipher            Ready
 fsharp/word-count               Not Ready
 go/food-chain                   Not Ready
 haskell/minesweeper             Not Ready
