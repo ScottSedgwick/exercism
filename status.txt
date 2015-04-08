@@ -6,7 +6,7 @@ python/simple-cipher	          Updated 31-03-2015
 go/secret-handshake				      Updated 31-03-2015
 
 csharp/atbash-cipher            Ready
-fsharp/word-count               Not Ready
+fsharp/word-count               Ready
 go/food-chain                   Not Ready
 haskell/minesweeper             Not Ready
 python/scrabble-score           Ready
