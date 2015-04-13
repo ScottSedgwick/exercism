@@ -1,13 +1,13 @@
-csharp/strain				            Submitted 30-03-2015
-haskell/house                   Submitted 30-03-2015 - Liked
-ruby/binary-search-tree				  Submitted 30-03-2015
-fsharp/pig-latin						    Submitted 30-03-2015 - Liked
-python/simple-cipher	          Updated 31-03-2015
-go/secret-handshake				      Updated 31-03-2015
+csharp/strain            Submitted 30-03-2015
+haskell/house            Submitted 30-03-2015 - Liked
+ruby/binary-search-tree  Submitted 30-03-2015
+fsharp/pig-latin         Submitted 30-03-2015 - Liked
+python/simple-cipher     Updated 31-03-2015
+go/secret-handshake      Updated 31-03-2015
 
 csharp/atbash-cipher            Ready
 fsharp/word-count               Ready
-go/food-chain                   Not Ready
+go/food-chain                   Ready
 haskell/minesweeper             Not Ready
 python/scrabble-score           Ready
 ruby/acronym                    Ready
