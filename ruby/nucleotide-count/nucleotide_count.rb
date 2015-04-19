@@ -1,22 +1,27 @@
-class DNA  
+# Solution for Exercism Nucleotid Count problem.
+class Nucleotide
   def initialize(dna)
     throw ArgumentError.new unless valid_dna?(dna)
     @dna = dna
   end
-  
+
   def count(nucleotide)
     throw ArgumentError.new unless valid_nucleotide?(nucleotide)
     @dna.count(nucleotide)
   end
-  
-  def nucleotide_counts
-    VALID_DNA.chars.each_with_object(Hash.new) do |nucleotide, counts|
+
+  def histogram
+    VALID_DNA.chars.each_with_object({}) do |nucleotide, counts|
       counts[nucleotide] = count(nucleotide)
     end
   end
-  
+
+  def self.from_dna(dna)
+    Nucleotide.new(dna)
+  end
+
   private
-  
+
   VALID_DNA = 'ATCG'
   VALID_NUCLEOTIDE = VALID_DNA + 'U'
 

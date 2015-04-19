@@ -2,7 +2,7 @@ import Development.Shake
 import Development.Shake.FilePath
 import System.Info
 
-srcFile = "food_chain.go"
+srcFile = "foodchain.go"
 
 main :: IO()
 main = shakeArgs shakeOptions $ do
