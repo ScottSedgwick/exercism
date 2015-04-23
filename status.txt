@@ -5,14 +5,11 @@ fsharp/word-count      Submitted 19-04-2015
 python/scrabble-score  Submitted 19-04-2015
 go/food-chain          Submitted 19-04-2015
 
-csharp/accumulate      Not Ready
-fsharp/roman-numerals  Not Ready
+csharp/accumulate      Ready
+fsharp/roman-numerals  Ready
 go/house               Not Ready
 haskell/minesweeper    Not Ready
 python/crypto-square   Not Ready
 ruby/crypto-square     Not Ready
 
 scheme/anagram
-
-ruby/nucleotide-count
-ruby/rna-transcription
