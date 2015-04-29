@@ -7,9 +7,9 @@ go/food-chain          Submitted 19-04-2015
 
 csharp/accumulate      Ready
 fsharp/roman-numerals  Ready
-go/house               Not Ready
+go/house               Ready
 haskell/minesweeper    Not Ready
 python/crypto-square   Not Ready
-ruby/crypto-square     Not Ready
+ruby/crypto-square     Ready
 
 scheme/anagram

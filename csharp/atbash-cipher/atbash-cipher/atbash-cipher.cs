@@ -8,42 +8,31 @@ public class Atbash
 {
     public static string Encode(string words)
     {
-        var cleartext = filter(words.ToLower());
-        var ciphertext = encode_string(cleartext);
-        var output = String.Join(" ", SplitByLength(ciphertext, 5));
-        return output;
+        return String.Join(" ", SplitByLength(EncodeString(words), 5));
     }
 
-    private static IEnumerable<int> numbers = Enumerable.Range('0', 10);
-    private static IEnumerable<int> letters = Enumerable.Range('a', 26);
-    private static IEnumerable<int> validChars = numbers.Concat(letters);
+    private static readonly IEnumerable<int> Numbers = Enumerable.Range('0', 10);
+    private static readonly IEnumerable<int> Letters = Enumerable.Range('a', 26);
+    private static readonly IEnumerable<int> ValidChars = Numbers.Concat(Letters);
 
-    private static char encode_char(char c)
+    private static char EncodeChar(char c)
     {
-        if (numbers.Contains(c))
-        {
-            return c;
-        }
-        if (letters.Contains(c))
-        {
-            return (char) ((int)'z' - (int)c + (int)'a');
-        }
-        return ' ';
+        return (Numbers.Contains(c)) ? c : (char)('z' - c + 'a');
     }
 
-    private static string encode_string(string s)
+    private static string EncodeString(string s)
     {
-        return new string(s.Select(c => encode_char(c)).ToArray());
+        return new string(Filter(s).Select(EncodeChar).ToArray());
     }
 
-    private static string filter(string words)
+    private static string Filter(string words)
     {
-        return new string(words.Where(c => validChars.Contains(c)).ToArray());
+        return new string(words.ToLower().Where(c => ValidChars.Contains(c)).ToArray());
     }
 
     private static IEnumerable<string> SplitByLength(string str, int maxLength)
     {
-        for (int index = 0; index < str.Length; index += maxLength)
+        for (var index = 0; index < str.Length; index += maxLength)
         {
             yield return str.Substring(index, Math.Min(maxLength, str.Length - index));
         }

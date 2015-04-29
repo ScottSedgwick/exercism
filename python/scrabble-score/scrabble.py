@@ -28,4 +28,4 @@ scores = {
 }
 
 def score(s):
-  return sum([scores.get(c, 0) for c in s.upper()])
+  return sum(scores.get(c, 0) for c in s.upper())
