@@ -9,7 +9,7 @@ csharp/accumulate      Ready
 fsharp/roman-numerals  Ready
 go/house               Ready
 haskell/minesweeper    Not Ready
-python/crypto-square   Not Ready
+python/crypto-square   Ready
 ruby/crypto-square     Ready
 
 scheme/anagram
