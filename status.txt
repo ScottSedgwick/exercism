@@ -1,15 +1,19 @@
-csharp/atbash-cipher   Submitted 19-04-2015
+csharp/accumulate      Submitted 23-06-2015
+fsharp/roman-numerals  Submitted 23-06-2015
+python/crypto-square   Submitted 23-06-2015
+python/hello-world     Submitted 23-06-2015
+ruby/crypto-square     Submitted 23-06-2015
+ruby/hello-world       Submitted 23-06-2015
+ruby/food-chain        Re-submitted 23-06-2015
+ruby/rna-transcription Re-submitted 23-06-2015
 haskell/house          Submitted 30-03-2015 - Liked
-ruby/acronym           Submitted 19-04-2015
-fsharp/word-count      Submitted 19-04-2015
-python/scrabble-score  Submitted 19-04-2015
 go/food-chain          Submitted 19-04-2015
 
-csharp/accumulate      Ready
-fsharp/roman-numerals  Ready
-go/house               Ready
-haskell/minesweeper    Not Ready
-python/crypto-square   Ready
-ruby/crypto-square     Ready
+go/house                  Not Ready
+haskell/minesweeper       Not Ready
+csharp/crypto-square      Not Ready
+fsharp/rna-transcription  Not Ready
+python/sublist            Not Ready
+ruby/clock                Not Ready
 
 scheme/anagram

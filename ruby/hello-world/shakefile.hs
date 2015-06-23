@@ -1,8 +1,8 @@
 import Development.Shake
 import Development.Shake.FilePath
 
-src_file = "food_chain.rb"
-tst_file = "food_chain_test.rb"
+src_file = "hello_world.rb"
+tst_file = "hello_world_test.rb"
 
 rubocop = ".rubocop.rb"
 

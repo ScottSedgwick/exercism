@@ -1,8 +1,8 @@
 import Development.Shake
 import Development.Shake.FilePath
 
-src_file = "complement.rb"
-tst_file = "complement_test.rb"
+src_file = "rna_transcription.rb"
+tst_file = "rna_transcription_test.rb"
 
 rubocop = ".rubocop.rb"
 
