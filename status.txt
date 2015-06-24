@@ -14,6 +14,6 @@ haskell/minesweeper       Not Ready
 csharp/crypto-square      Not Ready
 fsharp/rna-transcription  Not Ready
 python/sublist            Not Ready
-ruby/clock                Not Ready
+ruby/clock                Ready
 
 scheme/anagram

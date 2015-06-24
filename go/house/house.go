@@ -23,7 +23,7 @@ var (
 )
 
 func Embed(relPhrase, nounPhrase string) string {
-	return strings.Join([]string{relPhrase, nounPhrase}, " ")
+	return strings.TrimSpace(strings.Join([]string{relPhrase, nounPhrase}, " "))
 }
 
 func Verse(subject string, relPhrases []string, nounPhrase string) string {
@@ -37,6 +37,7 @@ func reverse(strs []string) []string {
 		result[l-index-1] = phrase
 	}
 	return result
+	return strs
 }
 
 func Song() string {
