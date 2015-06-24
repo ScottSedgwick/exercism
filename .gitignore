@@ -158,7 +158,6 @@ csharp/**/packages
 ### Languages I don't do yet ###
 coffeescript
 cpp
-elixir
 erlang
 java
 javascript
