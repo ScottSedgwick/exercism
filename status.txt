@@ -1,15 +1,13 @@
+elixir/bob             Submitted 24-06-2015
+go/house               Submitted 24-06-2015
 csharp/accumulate      Submitted 23-06-2015
 fsharp/roman-numerals  Submitted 23-06-2015
 python/crypto-square   Submitted 23-06-2015
-python/hello-world     Submitted 23-06-2015
 ruby/crypto-square     Submitted 23-06-2015
-ruby/hello-world       Submitted 23-06-2015
-ruby/food-chain        Re-submitted 23-06-2015
-ruby/rna-transcription Re-submitted 23-06-2015
 haskell/house          Submitted 30-03-2015 - Liked
-go/food-chain          Submitted 19-04-2015
 
-go/house                  Not Ready
+elixir/word-count         Not Ready
+go/pascals-triangle       Not Ready
 haskell/minesweeper       Not Ready
 csharp/crypto-square      Not Ready
 fsharp/rna-transcription  Not Ready
