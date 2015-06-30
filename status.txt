@@ -11,7 +11,7 @@ go/pascals-triangle       Not Ready
 haskell/minesweeper       Not Ready
 csharp/crypto-square      Not Ready
 fsharp/rna-transcription  Not Ready
-python/sublist            Not Ready
+python/sublist            Ready
 ruby/clock                Ready
 
 scheme/anagram
