@@ -7,7 +7,7 @@ ruby/crypto-square     Submitted 23-06-2015
 haskell/house          Submitted 30-03-2015 - Liked
 
 elixir/word-count         Not Ready
-go/pascals-triangle       Not Ready
+go/pascals-triangle       Ready
 haskell/minesweeper       Not Ready
 csharp/crypto-square      Not Ready
 fsharp/rna-transcription  Not Ready
