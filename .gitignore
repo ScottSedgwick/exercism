@@ -158,9 +158,11 @@ csharp/**/packages
 ### Languages I don't do yet ###
 coffeescript
 cpp
+elisp
 erlang
 java
 javascript
+lfe
 lisp
 lua
 objective-c
