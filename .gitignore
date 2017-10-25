@@ -36,6 +36,7 @@ cabal.config
 *.exe
 .shake.database
 *.tmp
+.stack-work
 
 
 ### Python ###
