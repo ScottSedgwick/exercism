@@ -6,17 +6,17 @@ srcFile = "house.go"
 
 main :: IO()
 main = shakeArgs shakeOptions $ do
-	want ["test"]
+  want ["test"]
 
-	"fmt" ~> cmd "go" "fmt"
+  "fmt" ~> cmd "go" "fmt"
 
-	"test" ~> do
-		need ["fmt"]
-		cmd "go" "test"
+  "test" ~> do
+    need ["fmt"]
+    cmd "go" "test"
 
-	"submit" ~> do
-		need ["test"]
-		cmd "exercism" "submit" srcFile
+  "submit" ~> do
+    need ["test"]
+    cmd "exercism" "submit" srcFile
 
-	"fetch" ~> 
-		cmd "exercism" "fetch" "go"
+  "fetch" ~> 
+    cmd "exercism" "fetch" "go"

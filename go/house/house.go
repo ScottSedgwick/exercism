@@ -37,7 +37,6 @@ func reverse(strs []string) []string {
 		result[l-index-1] = phrase
 	}
 	return result
-	return strs
 }
 
 func Song() string {
