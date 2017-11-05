@@ -8,7 +8,7 @@ nth n | n < 1 = Nothing
 -- Eratosthenes, but still not fantastic.
 
 primes :: [Integer]
-primes = filter isPrime [2..]
+primes = 2 : [x | x <- [3,5..], isPrime x]
 
 isPrime :: Integer -> Bool
 isPrime k = null [ x | x <- [2..isqrt k], k `mod`x  == 0]
