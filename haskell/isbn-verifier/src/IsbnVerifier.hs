@@ -1,25 +1,24 @@
 module IsbnVerifier (isbn, calcIsbn10, isbn10to13, calcIsbn13) where
 
-import Data.Char (isDigit, digitToInt, intToDigit)
+import Data.Char (digitToInt, intToDigit, isDigit)
 
+-- isbn can be digits and '-', and the last character can be 'x' or 'X', too.
+-- After taking out '-' chars, length should be 10.
 isbn :: String -> Bool
-isbn cs = (l == 10) && xOnlyLast ds && validIsbn xs
-  where
-    ds = filter (\d -> isDigit d || d == 'X') cs
-    l  = length ds
-    xs = map xToDigit ds
+isbn = checkLastDigit . reverse . filter (/= '-')
 
-xOnlyLast :: String -> Bool
-xOnlyLast = notElem 'X' . init
+checkLastDigit :: String -> Bool
+checkLastDigit (x:xs) | x `elem` "xX" = checkDigits 10 xs
+                      | isDigit x     = checkDigits (digitToInt x) xs
+                      | otherwise     = False
+checkLastDigit _ = False
 
-xToDigit :: Char -> Int
-xToDigit 'X' = 10
-xToDigit d   = digitToInt d
+checkDigits :: Int -> String -> Bool
+checkDigits c xs | not (all isDigit xs) = False
+                 | otherwise = checkSum $ c : map digitToInt xs
 
-validIsbn :: [Int] -> Bool
-validIsbn xs = s `mod` 11 == 0
-  where
-    s = sum $ zipWith (*) xs [10,9..1]
+checkSum :: [Int] -> Bool
+checkSum xs = (sum $ zipWith (*) xs [1..10]) `mod` 11 == 0
 
 -- Bonus work
 calcIsbn10 :: [Int] -> Maybe String
@@ -38,4 +37,4 @@ calcIsbn13 xs | length xs == 12 = Just $ map intToDigit (xs ++ [j])
               | otherwise       = Nothing
   where 
     j = 10 - (s `mod` 10)
-    s = sum $ zipWith (*) xs [1,3,1,3,1,3,1,3,1,3,1,3]
+    s = sum $ zipWith (*) xs (take 12 $ cycle [1,3])
